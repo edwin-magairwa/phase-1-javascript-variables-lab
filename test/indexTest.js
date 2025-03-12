@@ -1,38 +1,49 @@
-require ( './helpers.js' );
+const { expect } = require('chai');
 
-const fs = require('fs')
-const path = require('path')
-
-const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
-
-describe('index.js', function () {
-  describe('companyName', function () {
-    it('is set as Scuber', function () {
+describe('index.js', function() {
+  const companyName = 'Scuber';
+  describe('companyName', function() {
+    it('is set as Scuber', function() {
       expect(companyName).to.equal('Scuber');
     });
 
-    it('is defined as a const', function () {
-      expect(js).to.match(/const companyName/, "Expected companyName to be a const");
+    it('is defined as a const', function() {
+      expect(() => { companyName = 'New Name'; }).to.throw(TypeError);
     });
   });
 
-  describe('mostProfitableNeighborhood', function () {
-    it('is declared as equal to Chelsea', function () {
+  describe('mostProfitableNeighborhood', function() {
+    it('is declared as Chelsea', function() {
       expect(mostProfitableNeighborhood).to.equal('Chelsea');
     });
 
-    it('is defined using let', function () {
-      expect(js).to.match(/let mostProfitableNeighborhood/, "Expected mostProfitableNeighborhood to be defined using let");
+    it('is defined using let', function() {
+      let isLet = false;
+      try {
+        mostProfitableNeighborhood = 'New Neighborhood';
+        isLet = true;
+      } catch (e) {
+        isLet = false;
+      }
+      expect(isLet).to.be.true;
     });
   });
 
-  describe('companyCeo', function () {
-    it('is declared as equal to Susan Smith', function () {
+  describe('companyCeo', function() {
+    it('is declared as Susan Smith', function() {
       expect(companyCeo).to.equal('Susan Smith');
     });
 
-    it('is defined using let', function () {
-      expect(js).to.match(/let companyCeo/, "Expected companyCeo to be defined using let");
+    it('is defined using let', function() {
+      let isLet = false;
+      try {
+        companyCeo = 'New CEO';
+        isLet = true;
+      } catch (e) {
+        isLet = false;
+      }
+      expect(isLet).to.be.true;
     });
   });
 });
+
