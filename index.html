@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-
-    <title>Basics Variables Lab</title>
-    <meta name="description" content="Basics Variables Lab in the Learn.co curriculum">
-    <meta name="author" content="Flatiron School">
-
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Rating App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
   </head>
-
   <body>
-    <!-- <div> for Mocha to display test results. -->
-    <div id="mocha"></div>
+    <header>
+      <h1>Ramen Rating App</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Include Mocha and set it up for BDD-style testing. -->
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
+    <main>
+      <section id="ramen-list">
+        <h2>Top ramen review</h2>
+        <div class="ramen-card">
+          <img src="ramen 1https://media.istockphoto.com/id/1846848058/photo/asian-style-soup-broth-with-chow-mein-noodles-boiled-eggs-shimeji-mushrooms-and-bok-choy-on.jpg?s=2048x2048&w=is&k=20&c=R51hs1J5Ypl2gYRScxxLEkgDOzUo59FM5JlQxQRVS9I=" alt="Delicious Ramen Bowl">
+          <h3>Tonkotsu Ramen</h3>
+          <p> </p>
+          <p>Amaizing rich broth and tender pork.</p>
+          <div class="ramen-card">
+            <img src="ramen2 https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Miso Ramen Bowl"> 
+            <h3><MisoRamen</h3>  
+              <p></p>     
+              <p>Great balance of flavour with a deep umami taste</p>
+              </div>
+              </section>
+              
+              <section id="Add reveiw">
+                <h2>Add Your Ramen Review</h2>
+        <form id="review-form">
+          <label for="ramen-name">ramen name</label>
+          <input type="text" id="ramen-name" required>
+          <label for="rating">Rating</label>
+          <select id="rating">
+            <option value="4"></option>
+            <option value="3"></option>
+            <option value="2"></option>
+            <option value="1"></option>
+            </select>
+            <label for="review">Your Review</label>
+          <textarea id="review" rows="4" required></textarea>
+          <button type="submit"></button>
+          </form>
+          </section>
+          </main>
 
-    <!-- Include Chai as the matcher library. -->
-    <script src="node_modules/chai/chai.js"></script>
+          </footer>
+            <p>&copy; 2025 Ramen Rating App</p>
+            </footer>
 
-    <!-- Include the student's JavaScript file. -->
-    <script src="index.js"></script>
+            <script src-="script.js"></script>
+            </body>
+            </html>
 
-    <!-- Include the JavaScript file containing the tests. -->
-    <script src="test/indexTest.js"></script>
-
-    <!-- Include Flatiron School's test runner to push results to Learn. -->
-    <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
-  </body>
-</html>
+        
+        
+  
+          

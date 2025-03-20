@@ -1,4 +1,5 @@
+const companyName = 'Scuber'; // Declared as a constant
+let mostProfitableNeighborhood = 'Chelsea'; // Declared using let
+let companyCeo = 'Susan Smith'; // Declared using let
 
-const companyName = "Scuber";
-let mostProfitableNeighborhood = "Chelsea";
-let companyCeo = "Susan Smith";
+module.exports = { companyName, mostProfitableNeighborhood, companyCeo };
